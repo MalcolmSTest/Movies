@@ -8,7 +8,6 @@ namespace BLL.Model
 	{
 		public int Id { get; set; }
 
-
 		public List<MovieUserRating> MovieUserRatings { get; set; }
 	}
 }

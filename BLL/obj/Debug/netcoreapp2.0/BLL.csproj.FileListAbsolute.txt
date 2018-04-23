@@ -4,3 +4,6 @@ C:\Users\Malcolm Smith\Documents\Visual Studio 2017\Projects\Movies\BLL\obj\Debu
 C:\Users\Malcolm Smith\Documents\Visual Studio 2017\Projects\Movies\BLL\obj\Debug\netcoreapp2.0\BLL.csproj.CoreCompileInputs.cache
 C:\Users\Malcolm Smith\Documents\Visual Studio 2017\Projects\Movies\BLL\obj\Debug\netcoreapp2.0\BLL.AssemblyInfoInputs.cache
 C:\Users\Malcolm Smith\Documents\Visual Studio 2017\Projects\Movies\BLL\obj\Debug\netcoreapp2.0\BLL.AssemblyInfo.cs
+C:\Users\Malcolm Smith\Documents\Visual Studio 2017\Projects\Movies\BLL\bin\Debug\netcoreapp2.0\BLL.pdb
+C:\Users\Malcolm Smith\Documents\Visual Studio 2017\Projects\Movies\BLL\obj\Debug\netcoreapp2.0\BLL.dll
+C:\Users\Malcolm Smith\Documents\Visual Studio 2017\Projects\Movies\BLL\obj\Debug\netcoreapp2.0\BLL.pdb
