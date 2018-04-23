@@ -15,7 +15,7 @@ namespace BLL.Model
 		public DateTime YearOfRelease { get; set; }
 		[Required]
 		public int RunningTime { get; set; }
-		[Column(TypeName = "decimal(1, 2)")]
+		[Column(TypeName = "decimal(3, 2)")]
 		public decimal AverageRating { get; set; }
 
 		public List<MovieGenre> MovieGenres { get; set; }

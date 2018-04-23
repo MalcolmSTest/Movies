@@ -28,7 +28,7 @@ namespace BLL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    AverageRating = table.Column<decimal>(type: "decimal(1, 2)", nullable: false),
+                    AverageRating = table.Column<decimal>(type: "decimal(3, 2)", nullable: false),
                     RunningTime = table.Column<int>(nullable: false),
                     Title = table.Column<string>(nullable: false),
                     YearOfRelease = table.Column<DateTime>(nullable: false)

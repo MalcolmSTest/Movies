@@ -39,7 +39,7 @@ namespace BLL.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<decimal>("AverageRating")
-                        .HasColumnType("decimal(1, 2)");
+                        .HasColumnType("decimal(3, 2)");
 
                     b.Property<int>("RunningTime");
 
