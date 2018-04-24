@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "9f356644-d4b5-42be-9233-24017b75bc9c",
+		"name": "Freewheel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies - Find",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:50438/api/Movies/Find?title=Lord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50438",
+					"path": [
+						"api",
+						"Movies",
+						"Find"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Lord"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies - Top",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:50438/api/Movies/Top",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50438",
+					"path": [
+						"api",
+						"Movies",
+						"Top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies - Rate - Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movieId",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50438/api/Movies/Rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50438",
+					"path": [
+						"api",
+						"Movies",
+						"Rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies - Rate - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movieId",
+							"value": "3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50438/api/Movies/Rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50438",
+					"path": [
+						"api",
+						"Movies",
+						"Rate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
