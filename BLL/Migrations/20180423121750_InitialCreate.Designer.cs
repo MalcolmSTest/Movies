@@ -21,7 +21,7 @@ namespace BLL.Migrations
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BLL.Model.Genre", b =>
+            modelBuilder.Entity("BLL.Models.Genre", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -34,7 +34,7 @@ namespace BLL.Migrations
                     b.ToTable("Genres");
                 });
 
-            modelBuilder.Entity("BLL.Model.Movie", b =>
+            modelBuilder.Entity("BLL.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -47,14 +47,14 @@ namespace BLL.Migrations
                     b.Property<string>("Title")
                         .IsRequired();
 
-                    b.Property<DateTime>("YearOfRelease");
+                    b.Property<int>("YearOfRelease");
 
                     b.HasKey("Id");
 
                     b.ToTable("Movies");
                 });
 
-            modelBuilder.Entity("BLL.Model.MovieGenre", b =>
+            modelBuilder.Entity("BLL.Models.MovieGenre", b =>
                 {
                     b.Property<int>("MovieId");
 
@@ -67,7 +67,7 @@ namespace BLL.Migrations
                     b.ToTable("MovieGenres");
                 });
 
-            modelBuilder.Entity("BLL.Model.MovieUserRating", b =>
+            modelBuilder.Entity("BLL.Models.MovieUserRating", b =>
                 {
                     b.Property<int>("MovieId");
 
@@ -82,7 +82,7 @@ namespace BLL.Migrations
                     b.ToTable("MovieUserRatings");
                 });
 
-            modelBuilder.Entity("BLL.Model.User", b =>
+            modelBuilder.Entity("BLL.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -92,27 +92,27 @@ namespace BLL.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("BLL.Model.MovieGenre", b =>
+            modelBuilder.Entity("BLL.Models.MovieGenre", b =>
                 {
-                    b.HasOne("BLL.Model.Genre", "Genre")
+                    b.HasOne("BLL.Models.Genre", "Genre")
                         .WithMany("MovieGenres")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("BLL.Model.Movie", "Movie")
+                    b.HasOne("BLL.Models.Movie", "Movie")
                         .WithMany("MovieGenres")
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("BLL.Model.MovieUserRating", b =>
+            modelBuilder.Entity("BLL.Models.MovieUserRating", b =>
                 {
-                    b.HasOne("BLL.Model.Movie", "Movie")
+                    b.HasOne("BLL.Models.Movie", "Movie")
                         .WithMany("MovieUserRatings")
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("BLL.Model.User", "User")
+                    b.HasOne("BLL.Models.User", "User")
                         .WithMany("MovieUserRatings")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

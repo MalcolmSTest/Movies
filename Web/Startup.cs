@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore.Design;
+using System.IO;
+using BLL.Services;
 
 namespace Web
 {
@@ -28,7 +31,9 @@ namespace Web
 			services.AddMvc();
 
 			services.AddDbContext<DataContext>(options =>
-					options.UseSqlServer(Configuration.GetConnectionString("DataContext")));
+				options.UseSqlServer(Configuration.GetConnectionString("DataContext")));
+
+			services.AddScoped<IMovieService, MovieService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,12 +48,12 @@ namespace Web
 		}
 	}
 
-	public class DesignTimeDbContextFactory : Microsoft.EntityFrameworkCore.Design.IDesignTimeDbContextFactory<DataContext>
+	public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<DataContext>
 	{
 		public DataContext CreateDbContext(string[] args)
 		{
 			IConfigurationRoot configuration = new ConfigurationBuilder()
-				.SetBasePath(System.IO.Directory.GetCurrentDirectory())
+				.SetBasePath(Directory.GetCurrentDirectory())
 				.AddJsonFile("appsettings.json")
 				.Build();
 			var builder = new DbContextOptionsBuilder<DataContext>();

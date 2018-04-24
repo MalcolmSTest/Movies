@@ -31,7 +31,7 @@ namespace BLL.Migrations
                     AverageRating = table.Column<decimal>(type: "decimal(3, 2)", nullable: false),
                     RunningTime = table.Column<int>(nullable: false),
                     Title = table.Column<string>(nullable: false),
-                    YearOfRelease = table.Column<DateTime>(nullable: false)
+                    YearOfRelease = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

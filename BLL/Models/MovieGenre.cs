@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BLL.Model
+namespace BLL.Models
 {
 	public class MovieGenre
 	{

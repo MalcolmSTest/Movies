@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace BLL.Model
+namespace BLL.Models
 {
 	public class Movie
 	{
@@ -12,7 +12,7 @@ namespace BLL.Model
 		[Required]
 		public string Title { get; set; }
 		[Required]
-		public DateTime YearOfRelease { get; set; }
+		public int YearOfRelease { get; set; }
 		[Required]
 		public int RunningTime { get; set; }
 		[Column(TypeName = "decimal(3, 2)")]
